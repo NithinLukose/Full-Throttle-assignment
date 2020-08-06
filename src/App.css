@@ -1,38 +1,239 @@
-.App {
-  text-align: center;
+*{
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html,body{
+  margin:0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+#root{
+  height: 100%;
+  width: 100%;
+}
+
+
+.main-container{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(218, 223, 226);
+}
+
+.user-list{
+  width: 60%;
+  padding: 2%;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 25px 1px rgba(133,129,133,0.88);
+  -moz-box-shadow: 0px 0px 25px 1px rgba(133,129,133,0.88);
+  box-shadow: 0px 0px 25px 1px rgba(133,129,133,0.88);
+}
+
+.user-container{
+  border-bottom: 1px solid rgba(219, 219, 219, 0.575);   
+}
+
+.user-container:last-child{
+  border-bottom: none;
+}
+
+.user{
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px){
+
+  .user-list{
+    width: 80%;
   }
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media only screen and (max-width: 800px){
+
+  .user-list{
+    width: 70%;
+  }
+
+}
+
+.pagination{
+  border-radius: 5px;
+  background-color: white;
+  border: 1px solid rgb(90, 89, 89);
+  cursor:pointer;
+}
+
+
+
+/* The Modal (background) */
+.modal {
+  display: flex; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #fefefe;
+  position: relative;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+.modal-table{
+  width: 100%;
+  height: 100%;
+}
+
+.modal-table th{
+  text-align: left;
+  background-color: rgb(43, 43, 145);
   color: white;
+  padding: 1%;
 }
 
-.App-link {
-  color: #61dafb;
+.modal-table td{
+  background-color: rgb(187, 182, 182);
+  padding: 1%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.modal-table th td{
+  border-collapse: collapse;
+}
+
+.active-history-text {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1%;
+}
+
+.active-history-text:before,
+.active-history-text:after {
+  content: '';
+  border-top: 2px solid;
+  margin: 0 20px 0 0;
+  flex: 1 0 20px;
+}
+
+.active-history-text:after {
+  margin: 0 0 0 20px;
+}
+
+
+/* The Close Button */
+.closebtn{
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+
+}
+
+.closebtn:hover,
+.closebtn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.hr{
+  background-color: black;
+}
+
+.clb{
+  color: rgb(20, 92, 112);
+}
+
+.cb{
+  color: blue;
+}
+.ctext{
+  color: rgb(59, 53, 53)
+}
+
+.df{
+  display: flex;
+}
+
+.fdc{
+  flex-direction: column;
+}
+
+.jcc{
+  justify-content: center;
+}
+.jcfe{
+  justify-content: flex-end;
+}
+
+.aic{
+  align-items: center;
+}
+
+.jcsb{
+  justify-content: space-between;
+}
+
+.op{
+  opacity: 0.5;
+}
+
+.fs17{
+
+  font-size: 17px;
+}
+
+.w20{
+  width: 20%;
+}
+
+.w30{
+  width: 30%;
+}
+
+.w60{
+  width: 60%;
+}
+.w80{
+  width: 80%;
+}
+
+.pad2{
+  padding: 2%;
+}
+
+.mar2{
+  margin: 2%;
+}
+
+.mar1{
+  margin: 1%;
 }
