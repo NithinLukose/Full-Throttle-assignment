@@ -5,7 +5,7 @@ import {REQUEST_USERS,RESPONSE_USERS,PREVIOUS_PAGE,NEXT_PAGE} from '../actions'
 const userList = (state={
     isFetching:false,
     users:[],
-    usersPerPage:4,
+    usersPerPage:3,
     currentPage:1,
     totalPage:1
 },action) => {
