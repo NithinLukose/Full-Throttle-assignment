@@ -34,7 +34,7 @@ export const fetchUsers = () => {
     return async (dispatch) => {
 
         dispatch(requestUsers())
-        let res = await fetch('http://localhost:3001/members')
+        let res = await fetch('https://my-json-server.typicode.com/NithinLukose/json-server/members')
                     .then(res=>res.json())
         return dispatch(responseUsers(res))
 
